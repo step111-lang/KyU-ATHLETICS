@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> KyU ATHLETICS</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+position:relative;
+display:flex;
+justify-content: center;
+height:300vh;
+background:linear-gradient(100deg,lightblue,#1a1515);
+}
+ #inp{
+position: absolute;
+height:40px;
+width:90%;
+bottom:4px;
+border:none;
+outline:none;
+background:white;
+font-size:15px;
+color:black;
+border-radius:25px;
+font-weight:bold;
+}
+.header{
+position: sticky;
+height:100px;
+width:100%;
+background:linear-gradient(55deg,white,#1a1515);
+overflow: hidden;
+top:0;
+display:flex;
+justify-content: center;
+z-index:2;
+box-shadow:3px 3px 3px 3px gray;
+}
+.header h3{
+position: absolute;
+line-height:40px;
+left:20px;
+font-style:italic;
+}
+#paret {
+position: absolute;
+top:100px;
+width:100%;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items: center;
+
+}
+#paret h3{
+position: absolute;
+font-weight:bold;
+font-size:25px;
+}
+ .header .sendbtn{
+position: absolute;
+top:59%;
+left:85%;
+height:35px;
+width:35px;
+border-radius:50%;
+font-size:5px;
+outline:none;
+border:2px solid lightgray;
+color:black;
+display:flex;
+align-items: center;
+justify-content: center;
+}
+#long{
+position: absolute;
+top:50px;
+height:auto;
+width:100%;
+background:;
+margin:2px;
+display:flex;
+align-items: center;
+flex-direction: Column;
+overflow:auto;
+overflow: hidden;
+}
+.longc{
+position: relative;
+height:auto;
+width:100%;
+background:;
+margin:2px;
+display:flex;
+align-items: center;
+flex-direction: Column;
+overflow:auto;
+overflow: hidden;
+}
+
+#long{
+position: relative;
+height:auto;
+width:100%;
+margin:20px;
+background:;
+top:40px;
+display:flex;
+overflow:auto;
+overflow: hidden;
+align-items: center;
+flex-direction: Column;
+
+}
+.shortc{
+position: relative;
+height:auto;
+width:100%;
+background:;
+top:0px;
+display:flex;
+overflow:auto;
+overflow: hidden;
+align-items: center;
+flex-direction: Column;
+}
+.relayc{
+position:relative;
+height:;
+width:100%;
+background:;
+top:0px;
+overflow:auto;
+overflow: hidden;
+display:flex;
+align-items: center;
+flex-direction: Column;
+}
+.cont{
+position: relative;
+display:flex;
+height:40px;
+width:100%;
+align-items: center;
+justify-content:space-around;
+background:linear-gradient(45deg,white,deepskyblue);
+margin-top:3px;
+border-left:2px solid deepskyblue; 
+border-right:2px solid white; 
+font-style:italic;
+font-weight:bold;
+border-radius:25px 0 25px 0;
+}
+.cont:nth-child(even){
+background:linear-gradient(45deg,deepskyblue, orange);
+border-left:2px solid orange; 
+border-right:2px solid deepskyblue; 
+}
+.cont:hover{
+border-bottom:3px solid blue;
+}
+.ping{
+position: relative;
+display:flex;
+height:40px;
+width:100%;
+align-items: center;
+font-size:20px;
+justify-content:space-around;
+background:linear-gradient(50deg,orange,red);
+border-radius:25px 0 25px 0;
+font-weight:bold;
+color:#1a1515;
+box-shadow:inset 3px 2px 7px blue;
+}
+.navbar{
+position: absolute;
+height:400px;
+width:0px;
+background:linear-gradient(45deg,white,green);
+left:0;
+z-index:1;
+transition:0.02s ease-out;
+overflow: hidden;
+}
+.navbar h4{
+position: absolute;
+top:160px;
+font-style:italic;
+text-decoration:underline;
+left:10%;
+}
+.navbar .evtcalender{
+position: absolute;
+bottom:10px;
+width:inherit;
+display:flex;
+align-items: center;
+flex-direction:column;
+justify-content:start;
+height:50%;
+padding:10px;
+}
+.del{
+position: absolute;
+top:5px;
+right:5px;
+}
+.tt{
+position: absolute;
+height:150px;
+width:100%;
+transition:;
+border-radius: 0 0 80%  0px;
+background:linear-gradient(45deg,white,green);
+}
+.add{
+position: absolute;
+left:10px;
+top:10px;
+font-size:20px;
+color:black;
+}
+@media screen and (min-width:400px){
+.header .sendbtn{
+position: absolute;
+left:90%;
+}
+}
+</style> 
+<div class="header">
+  <h3>KyU ATHLETICS</h3>
+ 
+<input placeholder="Search Athlete...eg.kinuthia" id="inp" onkeyup="jump()">
+<button class="sendbtn" type="text" ">search</button>
+</div>
+
+<div id="paret">
+<h3>EMBU</h3>
+<div class="add"><i class="fa fa-bars"></i></div>
+<div class="navbar">
+   <div class="tt"></div>
+   <div class="del">X</div>
+    <h4>CALENDAR OF EVENTS</h4>
+    <div class="evtcalender">
+      <h5><label>LOCATION:</label>EMBU</h5>
+     
+    </div>
+ </div>
+<div id="long">
+<h4>DISTANCE (0-3,000m)</h4>
+ <div class="ping">
+    <div class="ext">position</div><div class="name">Name</div> <div class="time">Time</div>
+   </div>
+ <div class="longc" id="tok"> 
+ </div> 
+ </div>
+<div id="long">
+ <h4 class="hf">DISTANCE(0-100m)</h4>
+  <div class="ping">
+    <div class="ext">Position</div> <div class="name">Name</div> <div class="time">Time</div>
+   </div>
+ <div class="shortc" id="tok"> 
+ </div>
+ </div>
+<div id="long">
+ <h4 class="hf">RELAY</h4>
+  <div class="ping">
+    <div class="ext">Position</div> <div class="name">Name</div> <div class="time">Time</div>
+   </div>
+  <div class="relayc" id="tok"> 
+ </div>
+</div>
+<div id="long">
+ <h4>SPRINT</h4>
+  <div class="ping">
+    <div class="ext">Position</div> <div class="name">Name</div> <div class="time">Time</div>
+   </div>
+  <div class="relayc" id="tok"> 
+ </div>
+</div>
+</div>
+   <script>
+
+
+const navbar=document.querySelector(".navbar");
+const del=document.querySelector(".del");
+const tt=document.querySelector(".tt");
+const add=document.querySelector(".add");
+const inp=document.getElementById("inp").value.toLowerCase();
+const long=document.querySelector(".long");
+const longc=document.querySelector(".longc");
+const short=document.querySelector(".short");
+const ext=document.querySelector(".ext");
+const sendbtn=document.querySelector(".sendbtn");
+
+var log=[
+ {
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"kennedy pitter",
+ time:"3:50"
+},
+{
+position:"2",
+ relay:"long",
+ name:"jammy nat",
+ time:"3:50"
+},
+{
+ position:"3",
+ name:"peter",
+ time:"3:50"
+}
+,
+{
+ position:"3",
+ name:"Timothy brian",
+ time:"3:50"
+},
+{
+ position:"4",
+ name:"alfred janes",
+ time:"3:50"
+},
+{
+position:"6",
+ relay:"long",
+ name:"lucus joc",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+}
+];
+var shot=[
+ {
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+},
+{
+position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+},
+{
+position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+}
+];
+var relay=[
+ {
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"Stephen",
+ time:"3:50"
+},
+{
+position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"2",
+ name:"james kuria",
+ time:"3:50"
+},
+{
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+},
+{
+position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+}];
+function guko(arr){
+let update="";
+for(let i=0;i<arr.length;i++){
+  update+=`   
+    <div class="cont">
+       <div class="position">${arr[i].position}</div> <div class="Name">${arr[i].name}</div><div class="time">${arr[i].time}</div>
+    </div>
+         `;
+ }
+return update;
+}
+document.querySelector(".longc").innerHTML=`${guko(log)}`;
+document.querySelector(".shortc").innerHTML=`${guko(shot)}`;
+document.querySelector(".relayc").innerHTML=`${guko(relay)}`;
+function jump(){
+var inp=document.getElementById("inp").value.toLowerCase();
+var tok=document.getElementById("paret");
+var cont=tok.getElementsByClassName("Name");
+for(let i=0;i<cont.length;i++){
+if(cont[i].innerHTML.toLowerCase().indexOf(inp) > -1){
+   cont[i].parentNode.style.display="";
+ }else{
+cont[i].parentNode.style.display="none";
+}
+ }
+}
+
+del.addEventListener("click",()=>{
+ navbar.style.width="0";
+});
+add.addEventListener("click",()=>{
+ navbar.style.width="200px";
+});
+
+   </script>
+</body>
+</html>
