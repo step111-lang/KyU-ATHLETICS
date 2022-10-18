@@ -173,5 +173,36 @@ del.addEventListener("click",()=>{
  navbar.style.width="0";
 });
 add.addEventListener("click",()=>{
- navbar.style.width="200px";
+ navbar.style.width="220px";
 });
+let date=new Date();
+let d=date.getDate();
+let m=date.getMonth();
+let y=date.getFullYear();
+let ttdate=`${d}.${m}.${y}`;
+let arri=[
+{
+location:"EMBU",
+time:"20.9.2022"
+},
+{
+location:"JKUAT",
+time:"1.9.2022"
+}
+
+];
+const evtcalender=document.querySelector(".evtcalender");
+const evtsub=evtcalender.getElementsByTagName("h5");
+for(let j=0;j<arri.length;j++){
+  for(let i=0;i<evtsub.length;i++){
+      if(ttdate >= arri[j].time && evtsub[i].innerHTML.indexOf(arri[j].location) > -1){
+         let bt=document.createElement("strike");
+           bt.appendChild(evtsub[i]);
+           evtcalender.appendChild(bt);
+       }
+     }
+  }
+ 
+
+
+   
