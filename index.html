@@ -44,7 +44,7 @@ overflow: hidden;
 top:0;
 display:flex;
 justify-content: center;
-z-index:5;
+z-index:2;
 box-shadow:3px 3px 3px 3px gray;
 }
 .header h3{
@@ -258,6 +258,86 @@ color:black;
 strike{
 color:navy;
 }
+#paret .messo{
+position: absolute;
+color:blue;
+right:15px;
+top:10px;
+z-index:1;
+font-size:15px;
+} 
+.messo::after{
+content:"";
+position: absolute;
+transform:translate(0%,-50%);
+top:0%;
+right:-20%;
+height:10px;
+width:10px;
+background:blue;
+border-radius:50%;
+animation:mis 2s linear infinite;
+}
+.message {
+position: absolute;
+height:300px;
+width:250px;
+background:brown;
+z-index:1;
+top:3%;
+transform:scale(0);
+display:flex;
+flex-direction:column;
+align-items: center;
+overflow: hidden;
+overflow:auto;
+}
+.message .messages{
+position: absolute;
+top:40px;
+height:80%;
+width:90%;
+background:lightgray;
+display:flex;
+justify-content:start;
+flex-direction:column;
+overflow: hidden;
+overflow:auto;
+}
+.messages h5{
+position: relative;
+margin:4px;
+
+} 
+.messages h5 h4{
+position: absolute;
+left:0;
+font-weight:bold;
+font-style:italic;
+}
+.message .di{
+position: absolute;
+font-size:15px;
+top:10px;
+font-weight:bold;
+}
+.elm{
+transform:scale(0);
+}
+.xlm{
+transform:scale(1);
+}
+@keyframes mis{
+0%{
+background:black;
+}
+50%{
+background:red;
+}
+100%{
+background:black;
+}
+}
 @media screen and (min-width:400px){
 .header .sendbtn{
 position: absolute;
@@ -274,8 +354,16 @@ left:90%;
 
 <div id="paret">
 <h3>EMBU</h3>
-<div class="add"><i class="fa fa-bars"></i></div>
+<div class="add"><i class="fa fa-bars">@</i></div>
+<div class="messo"><i class="fa fa-envelope"></i></div>
+<div class="message">
+ <div class="di">notifications</div>
+ <div class="messages">
+  <h5><h4>may 18:</h4>Hello there ,welcome to the athletics WebApp </h5>
+ </div>
+</div>
 <div class="navbar">
+  
    <div class="tt"></div>
    <div class="del">X</div>
     <h4>CALENDAR OF EVENTS</h4>
@@ -325,6 +413,5 @@ left:90%;
 </div>
 </div>
    <script src="index.js"></script>
-
 </body>
 </html>
