@@ -205,9 +205,6 @@ for(let j=0;j<arri.length;j++){
        }
      }
   }
-var mesar=[
-
-];
 messo.addEventListener("click",()=>{
  message.classList.toggle("xlm");
 });
