@@ -1,4 +1,7 @@
-
+ 
+const di=document.querySelector(".di");
+const message=document.querySelector(".message");
+const messo=document.querySelector(".messo");
 const navbar=document.querySelector(".navbar");
 const del=document.querySelector(".del");
 const tt=document.querySelector(".tt");
@@ -202,7 +205,10 @@ for(let j=0;j<arri.length;j++){
        }
      }
   }
- 
+var mesar=[
 
-
+];
+messo.addEventListener("click",()=>{
+ message.classList.toggle("xlm");
+});
    
