@@ -177,6 +177,7 @@ del.addEventListener("click",()=>{
 });
 add.addEventListener("click",()=>{
  navbar.style.width="220px";
+ navbar.classList.toggle("navba");
 });
 let date=new Date();
 let d=date.getDate();
@@ -239,7 +240,7 @@ document.querySelector(".messages").innerHTML=`${messaf(messar)}`;
 
 messo.addEventListener("click",()=>{
  message.classList.toggle("xlm");
- message.classList.toggle("navba");
+ 
 
 });
    
