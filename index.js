@@ -1,4 +1,4 @@
- 
+
 const di=document.querySelector(".di");
 const message=document.querySelector(".message");
 const messo=document.querySelector(".messo");
@@ -186,13 +186,12 @@ let ttdate=`${d}.${m}.${y}`;
 let arri=[
 {
 location:"EMBU",
-time:"20.9.2022"
+time:"21.9.2022"
 },
 {
 location:"JKUAT",
 time:"1.9.2022"
 }
-
 ];
 const evtcalender=document.querySelector(".evtcalender");
 const evtsub=evtcalender.getElementsByTagName("h5");
@@ -205,6 +204,39 @@ for(let j=0;j<arri.length;j++){
        }
      }
   }
+var messar=[
+{
+ time:"23/9/2022",
+ mess:"All members to assemble at 2:00am"
+},
+{
+ time:"12/9/2353",
+ mess:"if you came across a hat call me"
+},
+{
+ time:"24/9/2022",
+ mess:"great work guys love that spirit next time we do it even more than that"
+},
+{
+ time:"6/10/2022",
+ mess:"All members to assemble at 2:00am"
+},
+{
+ time:"20/10/2022",
+ mess:"Happy madaraka to everyone"
+}
+];
+function messaf(mesar){
+let mesart="";
+for(let i=0;i<mesar.length;i++){
+mesart+=`
+ <h5><h4>${mesar[i].time}</h4>${mesar[i].mess}</h5>
+`;
+}
+return mesart;
+}
+document.querySelector(".messages").innerHTML=`${messaf(messar)}`;
+
 messo.addEventListener("click",()=>{
  message.classList.toggle("xlm");
 });
