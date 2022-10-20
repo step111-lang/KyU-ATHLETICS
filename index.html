@@ -264,11 +264,8 @@ color:blue;
 right:15px;
 top:10px;
 z-index:1;
-font-size:30px;
+display:;
 } 
-i{
-font-size:30px;
-}
 .messo::after{
 content:"";
 position: absolute;
@@ -300,29 +297,44 @@ position: absolute;
 top:40px;
 height:80%;
 width:90%;
-background:lightgray;
+background:silver;
 display:flex;
-justify-content:start;
+align-items: center;
+justify-content: start;
 flex-direction:column;
 overflow: hidden;
 overflow:auto;
+font-style:italic;
+font-size:15px;
+padding:10px;
+box-shadow:inset 3px 3px 8px;
+
+
 }
-.messages h5{
+.messo i{
+font-size:30px;
+}
+.message .messages h5{
 position: relative;
 margin:4px;
 
 } 
+
 .messages h5 h4{
 position: absolute;
 left:0;
 font-weight:bold;
 font-style:italic;
+font-size:10px;
+
 }
 .message .di{
 position: absolute;
 font-size:15px;
 top:10px;
 font-weight:bold;
+text-shadow:.05em .05em .05em blue,
+ .03em .03em .05em black;
 }
 .elm{
 transform:scale(0);
@@ -362,7 +374,6 @@ left:90%;
 <div class="message">
  <div class="di">notifications</div>
  <div class="messages">
-  <h5><h4>may 18:</h4>Hello there ,welcome to the athletics WebApp </h5>
  </div>
 </div>
 <div class="navbar">
