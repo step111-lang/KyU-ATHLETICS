@@ -239,5 +239,7 @@ document.querySelector(".messages").innerHTML=`${messaf(messar)}`;
 
 messo.addEventListener("click",()=>{
  message.classList.toggle("xlm");
+ message.classList.toggle("navba");
+
 });
    
