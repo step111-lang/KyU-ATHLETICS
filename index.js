@@ -1,4 +1,5 @@
 
+
 const di=document.querySelector(".di");
 const message=document.querySelector(".message");
 const messo=document.querySelector(".messo");
@@ -145,6 +146,46 @@ position:"1",
  name:"james",
  time:"3:50"
 }];
+var sprint=[
+ {
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"Stephen",
+ time:"3:50"
+},
+{
+position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"2",
+ name:"james kuria",
+ time:"3:50"
+},
+{
+ position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+},
+{
+ position:"1",
+ name:"james",
+ time:"3:50"
+},
+{
+position:"1",
+ relay:"long",
+ name:"james",
+ time:"3:50"
+}];
 function guko(arr){
 let update="";
 for(let i=0;i<arr.length;i++){
@@ -159,6 +200,7 @@ return update;
 document.querySelector(".longc").innerHTML=`${guko(log)}`;
 document.querySelector(".shortc").innerHTML=`${guko(shot)}`;
 document.querySelector(".relayc").innerHTML=`${guko(relay)}`;
+document.querySelector(".sprintc").innerHTML=`${guko(sprint)}`;
 function jump(){
 var inp=document.getElementById("inp").value.toLowerCase();
 var tok=document.getElementById("paret");
@@ -187,7 +229,7 @@ let ttdate=`${d}.${m}.${y}`;
 let arri=[
 {
 location:"EMBU",
-time:"21.9.2022"
+time:"22.9.2022"
 },
 {
 location:"JKUAT",
@@ -207,24 +249,16 @@ for(let j=0;j<arri.length;j++){
   }
 var messar=[
 {
- time:"23/9/2022",
- mess:"All members to assemble at 2:00am"
-},
-{
- time:"12/9/2353",
- mess:"if you came across a hat call me"
-},
-{
- time:"24/9/2022",
- mess:"great work guys love that spirit next time we do it even more than that"
-},
-{
- time:"6/10/2022",
- mess:"All members to assemble at 2:00am"
+ time:"18/10/2022",
+ mess:"Welcome to the athletics WebApp"
 },
 {
  time:"20/10/2022",
  mess:"Happy madaraka to everyone"
+},
+{
+ time:"22/10/2022",
+ mess:"Great job done guys,let's keep on pushing."
 }
 ];
 function messaf(mesar){
@@ -243,4 +277,21 @@ messo.addEventListener("click",()=>{
  
 
 });
-   
+const picpa=document.querySelector(".picpa");
+var imd=document.getElementsByTagName("img");
+var dis=document.getElementById("dis");
+for(let i=0;i< imd.length;i++){
+ imd[i].addEventListener("click",(e)=>{
+ dis.src=e.target.src;
+
+});
+}
+function deli(){
+  
+  picpa.classList.toggle("blo");
+ }
+function gall(){
+  picpa.classList.toggle("blo");
+ }
+
+    
